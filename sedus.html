@@ -1,0 +1,182 @@
+<title>SEDUS — Anaëlle Clef</title>
+<style>
+:root{
+  --paper:#EDEBE6;--ink:#111110;--line:rgba(17,17,16,.13);
+  --line-strong:rgba(17,17,16,.28);--mute:#6E6E68;--body:#2b2b28;
+  color-scheme:light;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.45;}
+a{color:inherit;text-decoration:none;}
+.u-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;}
+.u-mute{color:var(--mute);}
+/* nav */
+.nav{display:flex;align-items:flex-start;justify-content:space-between;padding:26px clamp(20px,3.2vw,52px);border-bottom:1px solid var(--line);}
+.brand b{font-size:19px;font-weight:800;letter-spacing:-.01em;display:block;}
+.brand span{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);}
+.navlinks{display:flex;gap:22px;align-items:center;padding-top:5px;}
+.navlinks a{font-size:13px;position:relative;}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:right .3s ease;}
+.navlinks a:hover::after{right:0;}
+.navmark{width:9px;height:9px;background:var(--ink);margin-top:6px;}
+/* project header */
+.phead{padding:clamp(40px,7vw,100px) clamp(20px,3.2vw,52px) clamp(28px,3vw,44px);border-bottom:1px solid var(--ink);}
+.phead .kick{display:flex;justify-content:space-between;color:var(--mute);margin-bottom:clamp(24px,4vw,54px);}
+.ptitle{margin:0;font-size:clamp(58px,17vw,220px);font-weight:800;letter-spacing:-.04em;line-height:.82;}
+.plede{margin:20px 0 0;max-width:30ch;font-size:clamp(18px,2.4vw,30px);font-weight:600;letter-spacing:-.015em;line-height:1.12;text-wrap:balance;}
+.pmeta{display:grid;grid-template-columns:repeat(4,auto);gap:clamp(20px,4vw,64px);margin-top:clamp(30px,4vw,52px);}
+.pmeta .m .u-label{display:block;color:var(--mute);margin-bottom:7px;}
+.pmeta .m span{font-size:15px;}
+/* body */
+.pbody{padding:clamp(40px,5vw,78px) clamp(20px,3.2vw,52px);}
+.pbody .lead{max-width:64ch;font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--body);margin:0 0 clamp(34px,4vw,56px);}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(10px,1.2vw,16px);}
+.tile{position:relative;background:rgba(17,17,16,.035);border:1px solid var(--line-strong);display:flex;flex-direction:column;justify-content:space-between;padding:16px;min-height:120px;color:var(--mute);}
+.tile .n{font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:.06em;}
+.tile .t{font-size:11px;letter-spacing:.18em;text-transform:uppercase;}
+.tile.big{grid-column:span 4;aspect-ratio:3/2;}
+.tile.med{grid-column:span 3;aspect-ratio:4/3;}
+.tile.sm{grid-column:span 2;aspect-ratio:1/1;}
+.tile.tall{grid-column:span 2;aspect-ratio:2/3;}
+.tile.wide{grid-column:span 6;aspect-ratio:16/6;}
+/* sub-projects */
+.subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
+.sub{padding:clamp(30px,4vw,56px) 0;border-top:1px solid var(--ink);}
+.sub:first-of-type{border-top:1px solid var(--ink);}
+.sub__top{display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:baseline;margin-bottom:clamp(20px,2.5vw,30px);}
+.sub__top .no{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;letter-spacing:.05em;}
+.sub__top h2{margin:0;font-size:clamp(28px,4.5vw,54px);font-weight:800;letter-spacing:-.025em;line-height:.95;}
+.sub__top .cat{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;justify-self:end;text-align:right;}
+.sub__lede{margin:0 0 clamp(16px,2vw,24px);max-width:40ch;font-size:clamp(17px,2vw,24px);font-weight:600;letter-spacing:-.015em;line-height:1.15;color:var(--ink);}
+.sub__epi{margin:0 0 clamp(22px,2.5vw,32px);padding-left:22px;border-left:2px solid var(--ink);max-width:54ch;font-size:15px;line-height:1.75;font-style:italic;color:var(--body);}
+.sub p{margin:0 0 clamp(22px,2.5vw,32px);max-width:66ch;font-size:15.5px;line-height:1.6;color:var(--body);}
+.sub__credit{margin:clamp(16px,2vw,24px) 0 0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);}
+@media(max-width:720px){.sub__top{grid-template-columns:34px 1fr;}.sub__top .cat{display:none;}}
+/* next */
+.pnext{border-top:1px solid var(--ink);padding:clamp(34px,4vw,60px) clamp(20px,3.2vw,52px);display:flex;justify-content:space-between;align-items:center;}
+.pnext .u-label{color:var(--mute);display:block;margin-bottom:8px;}
+.pnext .nx{font-size:clamp(30px,6vw,72px);font-weight:800;letter-spacing:-.03em;}
+.pnext a{display:flex;align-items:center;gap:18px;}
+/* footer */
+.foot{border-top:1px solid var(--line);padding:clamp(30px,4vw,54px) clamp(20px,3.2vw,52px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;color:var(--mute);font-size:12px;letter-spacing:.03em;}
+.foot a{color:var(--mute);}
+@media(max-width:720px){
+  .navlinks{gap:14px;}
+  .pmeta{grid-template-columns:1fr 1fr;gap:22px;}
+  .gallery{grid-template-columns:repeat(2,1fr);}
+  .tile.big,.tile.med,.tile.wide{grid-column:span 2;aspect-ratio:3/2;}
+  .tile.sm,.tile.tall{grid-column:span 1;}
+}
+</style>
+<nav class="nav">
+  <a class="brand" href="index.html"><b>Anaëlle Clef</b><span>Interior Architect</span></a>
+  <div class="navlinks">
+    <a href="index.html">Index</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <div class="navmark"></div>
+  </div>
+</nav>
+
+<header class="phead">
+  <div class="kick">
+    <span class="u-label">Project — 02</span>
+    <span class="u-label">Showroom & Planning</span>
+  </div>
+  <h1 class="ptitle">SEDUS</h1>
+  <p class="plede">Workspace planning and showroom management for a furniture house.</p>
+  <div class="pmeta"><div class="m"><span class="u-label">Company</span><span>Sedus Stoll b.v.b.a.</span></div><div class="m"><span class="u-label">Role</span><span>Workspace Planner & Showroom Manager</span></div><div class="m"><span class="u-label">Year</span><span>2023 — 2025</span></div><div class="m"><span class="u-label">Type</span><span>Showroom / Furniture</span></div></div>
+</header>
+
+<section class="pbody">
+  <p class="lead">Planning workspaces and managing the Sedus showroom — translating client briefs into furnished, functional layouts, curating the showroom as a living catalogue of the collection, and developing marketing tools for its events.</p>
+  <div class="subhead">
+    <span class="u-label">Selected — 01–05</span>
+    <span class="u-label u-mute">Sedus</span>
+  </div>
+  <div class="sub">
+    <div class="sub__top">
+      <span class="no">01</span>
+      <h2>Showroom Design</h2>
+      <span class="cat">Showroom</span>
+    </div>
+    <p class="sub__lede">Showroom design for Sedus Stoll bvba.</p>
+    <p>Design and staging of the Sedus showroom — arranging the collection into furnished, functional settings that let visitors experience each piece in context.</p>
+    <div class="gallery">
+      <div class="tile big"><span class="n">01</span><span class="t">Showroom</span></div>
+      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
+      <div class="tile med"><span class="n">03</span><span class="t">Vignette</span></div>
+      <div class="tile sm"><span class="n">04</span><span class="t">Furniture</span></div>
+    </div>
+    <p class="sub__credit">Design © Anaëlle Clef · For Sedus Stoll bvba · Photography © Pilar Shoots</p>
+  </div><div class="sub">
+    <div class="sub__top">
+      <span class="no">02</span>
+      <h2>Marketing Tool</h2>
+      <span class="cat">Marketing / Event</span>
+    </div>
+    <p class="sub__lede">Opening event — new showroom.</p>
+    <p>Together with the marketing team I designed postcards featuring the original sketches of the designer behind the se:living collection, celebrating the artistry and thoughtfulness that went into its creation. These sketches capture the raw, creative process — the moment when vision transforms into design. The postcards are intentionally made to resemble an unfinished colouring card, inviting people to imagine the pieces in any colour that suits their mood or space. They can even colour them in themselves, adding a personal touch and turning them into unique keepsakes to hang on the fridge or display as art. It's a tribute to the designer's creativity and a way to engage with the collection in a fun and interactive way.</p>
+    <div class="gallery">
+      <div class="tile big"><span class="n">01</span><span class="t">Postcard</span></div>
+      <div class="tile sm"><span class="n">02</span><span class="t">Sketch</span></div>
+      <div class="tile med"><span class="n">03</span><span class="t">Event</span></div>
+      <div class="tile sm"><span class="n">04</span><span class="t">Detail</span></div>
+    </div>
+    <p class="sub__credit">Design © Anaëlle Clef · For Sedus Stoll bvba · Photography © Pilar Shoots</p>
+  </div><div class="sub">
+    <div class="sub__top">
+      <span class="no">03</span>
+      <h2>Gandae</h2>
+      <span class="cat">Workspace</span>
+    </div>
+    <p>Workspace planning and design developed at Sedus for Gandae.</p>
+    <div class="gallery">
+      <div class="tile big"><span class="n">01</span><span class="t">Workspace</span></div>
+      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
+      <div class="tile med"><span class="n">03</span><span class="t">Layout / plan</span></div>
+      <div class="tile sm"><span class="n">04</span><span class="t">Furniture</span></div>
+    </div>
+    <p class="sub__credit">Workspace project · Sedus Stoll bvba</p>
+  </div><div class="sub">
+    <div class="sub__top">
+      <span class="no">04</span>
+      <h2>Ivago</h2>
+      <span class="cat">Workspace · Gent</span>
+    </div>
+    <p>Workspace planning and design developed at Sedus for Ivago, Gent.</p>
+    <div class="gallery">
+      <div class="tile big"><span class="n">01</span><span class="t">Workspace</span></div>
+      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
+      <div class="tile med"><span class="n">03</span><span class="t">Layout / plan</span></div>
+      <div class="tile sm"><span class="n">04</span><span class="t">Furniture</span></div>
+    </div>
+    <p class="sub__credit">Workspace project · Sedus Stoll bvba</p>
+  </div><div class="sub">
+    <div class="sub__top">
+      <span class="no">05</span>
+      <h2>Farys</h2>
+      <span class="cat">Tender · Workspace</span>
+    </div>
+    <p class="sub__lede">Farys — tender.</p>
+    <p>A workspace design developed as part of a tender for Farys.</p>
+    <div class="gallery">
+      <div class="tile big"><span class="n">01</span><span class="t">Concept</span></div>
+      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
+      <div class="tile med"><span class="n">03</span><span class="t">Layout / plan</span></div>
+      <div class="tile sm"><span class="n">04</span><span class="t">Furniture</span></div>
+    </div>
+    <p class="sub__credit">Workspace project · Sedus Stoll bvba</p>
+  </div>
+</section>
+
+<nav class="pnext">
+  <div><span class="u-label">Next project</span></div>
+  <a href="university.html"><span class="nx">University</span><span style="font-size:28px;">&rarr;</span></a>
+</nav>
+
+<footer class="foot">
+  <span>Anaëlle Clef — Interior Architect · Portfolio © 2026</span>
+  <span><a href="mailto:anaelle.clef@hotmail.com">anaelle.clef@hotmail.com</a> · <a href="https://www.linkedin.com/in/anaelleclef/">LinkedIn</a></span>
+</footer>
