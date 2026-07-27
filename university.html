@@ -40,6 +40,21 @@ a{color:inherit;text-decoration:none;}
 .tile.sm{grid-column:span 2;aspect-ratio:1/1;}
 .tile.tall{grid-column:span 2;aspect-ratio:2/3;}
 .tile.wide{grid-column:span 6;aspect-ratio:16/6;}
+/* carousel / slideshow */
+.carousel{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:#0c0c0c;}
+.carousel__track{display:flex;transition:transform .55s cubic-bezier(.7,0,.2,1);}
+.carousel__slide{flex:0 0 100%;aspect-ratio:3/2;background-size:cover;background-position:50% 42%;}
+.carousel--doc{background:#f4f2ee;}
+.carousel--doc .carousel__slide{background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:4/3;}
+.carousel__btn{box-shadow:0 0 0 1px rgba(17,17,16,.10);}
+.carousel__btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border:0;border-radius:50%;background:rgba(237,235,230,.88);color:var(--ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;}
+.carousel__btn:hover{background:var(--paper);transform:translateY(-50%) scale(1.06);}
+.carousel__btn.prev{left:16px;} .carousel__btn.next{right:16px;}
+.carousel__dots{position:absolute;bottom:15px;left:0;right:0;display:flex;gap:8px;justify-content:center;z-index:3;}
+.carousel__dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(237,235,230,.5);cursor:pointer;padding:0;transition:width .25s,background .25s;}
+.carousel__dots button.active{background:var(--paper);width:22px;border-radius:5px;}
+.carousel__count{position:absolute;top:14px;right:16px;z-index:3;color:var(--paper);font-size:11px;letter-spacing:.14em;font-variant-numeric:tabular-nums;background:rgba(17,17,16,.42);padding:5px 11px;}
+@media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
 .sub{padding:clamp(30px,4vw,56px) 0;border-top:1px solid var(--ink);}
@@ -70,7 +85,7 @@ a{color:inherit;text-decoration:none;}
 }
 </style>
 <nav class="nav">
-  <a class="brand" href="index.html"><b>Anaëlle Clef</b><span>Interior Architect</span></a>
+  <a class="brand" href="index.html"><b>Anaëlle Clef</b><span>Master Interior Architect</span></a>
   <div class="navlinks">
     <a href="index.html">Index</a>
     <a href="index.html#about">About</a>
@@ -165,6 +180,30 @@ a{color:inherit;text-decoration:none;}
 </nav>
 
 <footer class="foot">
-  <span>Anaëlle Clef — Interior Architect · Portfolio © 2026</span>
+  <span>Anaëlle Clef — Master Interior Architect · Portfolio © 2026</span>
   <span><a href="mailto:anaelle.clef@hotmail.com">anaelle.clef@hotmail.com</a> · <a href="https://www.linkedin.com/in/anaelleclef/">LinkedIn</a></span>
 </footer>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-carousel]').forEach(function(c){
+    var track=c.querySelector('.carousel__track');
+    var slides=c.querySelectorAll('.carousel__slide');
+    var dots=c.querySelectorAll('.carousel__dots button');
+    var count=c.querySelector('.carousel__count b');
+    var i=0,n=slides.length,timer,reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(k){i=(k+n)%n;track.style.transform='translateX(-'+(i*100)+'%)';
+      dots.forEach(function(d,j){d.classList.toggle('active',j===i);});
+      if(count)count.textContent=(i+1);}
+    function reset(){clearInterval(timer);if(!reduce)timer=setInterval(function(){go(i+1);},4500);}
+    c.querySelector('.next').addEventListener('click',function(){go(i+1);reset();});
+    c.querySelector('.prev').addEventListener('click',function(){go(i-1);reset();});
+    dots.forEach(function(d,j){d.addEventListener('click',function(){go(j);reset();});});
+    var x0=null;
+    c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+    c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+      if(Math.abs(dx)>40){go(dx<0?i+1:i-1);reset();}x0=null;});
+    go(0);reset();
+  });
+})();
+</script>
