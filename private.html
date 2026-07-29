@@ -54,6 +54,8 @@ a{color:inherit;text-decoration:none;}
 .carousel__dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(237,235,230,.5);cursor:pointer;padding:0;transition:width .25s,background .25s;}
 .carousel__dots button.active{background:var(--paper);width:22px;border-radius:5px;}
 .carousel__count{position:absolute;top:14px;right:16px;z-index:3;color:var(--paper);font-size:11px;letter-spacing:.14em;font-variant-numeric:tabular-nums;background:rgba(17,17,16,.42);padding:5px 11px;}
+.sub__full{width:100vw;margin-left:calc(50% - 50vw);}
+.sub__full img{display:block;width:100%;height:auto;}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
@@ -158,13 +160,7 @@ a{color:inherit;text-decoration:none;}
       <span class="cat">Ceramics</span>
     </div>
     <p>Ceramic and pottery work, begun with the initiation course at Ossenkop in Gent — a hands-on, material practice alongside the interior work.</p>
-    <div class="gallery">
-      <div class="tile sm"><span class="n">01</span><span class="t">Piece</span></div>
-      <div class="tile sm"><span class="n">02</span><span class="t">Piece</span></div>
-      <div class="tile sm"><span class="n">03</span><span class="t">Piece</span></div>
-      <div class="tile med"><span class="n">04</span><span class="t">Process</span></div>
-      <div class="tile med"><span class="n">05</span><span class="t">Glaze</span></div>
-    </div>
+    <div class="sub__full"><img src="images/private/pottery.png" alt="Pottery" loading="lazy"></div>
   </div>
 </section>
 
