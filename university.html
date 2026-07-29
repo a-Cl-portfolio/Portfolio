@@ -58,9 +58,9 @@ a{color:inherit;text-decoration:none;}
 .sub__full img{display:block;width:100%;height:auto;}
 .sub__center{width:100vw;margin-left:calc(50% - 50vw);display:flex;justify-content:center;}
 .sub__center img{display:block;width:80vw;max-width:80vw;height:auto;}
-.imggrid{columns:2;column-gap:clamp(12px,1.5vw,18px);}
+.imggrid{columns:2;column-gap:clamp(12px,1.5vw,18px);max-width:75%;}
 .imggrid img{width:100%;height:auto;display:block;margin:0 0 clamp(12px,1.5vw,18px);border:1px solid var(--line-strong);background:#f4f2ee;break-inside:avoid;}
-@media(max-width:720px){.imggrid{columns:1;}}
+@media(max-width:720px){.imggrid{columns:1;max-width:100%;}}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
