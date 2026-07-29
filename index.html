@@ -172,14 +172,14 @@
   .lang .lvl{font-variant-numeric:tabular-nums;color:var(--mute);letter-spacing:.06em;font-size:12px;text-transform:uppercase;}
 
   /* footer */
-  .foot{border-top:1px solid var(--ink);padding:clamp(40px,5vw,80px) clamp(20px,3.2vw,52px) 40px;background:var(--paper);}
-  .foot__img{max-width:680px;margin:0 auto clamp(40px,5vw,66px);aspect-ratio:2000/692;
-    background:url('images/home/footer-bg.jpg') center/cover no-repeat;border:1px solid var(--line-strong);}
-  .foot__row{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-end;}
+  .foot{border-top:1px solid var(--ink);background:var(--paper);}
+  .foot__hero{padding:clamp(48px,7vw,110px) clamp(20px,3.2vw,52px);display:flex;flex-wrap:wrap;gap:32px;
+    justify-content:space-between;align-items:flex-end;min-height:clamp(340px,42vw,520px);
+    background:linear-gradient(rgba(237,235,230,.14),rgba(237,235,230,.14)),url('images/home/footer-bg.jpg') center/cover no-repeat;}
   .foot .big{font-size:clamp(34px,7vw,88px);font-weight:800;letter-spacing:-.03em;line-height:.9;}
   .foot .contact{line-height:1.9;font-size:14px;text-align:right;}
   .foot .contact .u-label{display:block;margin-bottom:8px;color:var(--mute);}
-  .foot__note{width:100%;display:flex;justify-content:space-between;color:var(--mute);font-size:11px;letter-spacing:.04em;padding-top:26px;margin-top:8px;border-top:1px solid var(--line);}
+  .foot__note{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;color:var(--mute);font-size:11px;letter-spacing:.04em;padding:24px clamp(20px,3.2vw,52px);border-top:1px solid var(--line);}
 
   @media (max-width:720px){
     :root{--stage-h:76vh;}
@@ -504,8 +504,7 @@
 </section>
 
 <footer class="foot" id="contact">
-  <div class="foot__img"></div>
-  <div class="foot__row">
+  <div class="foot__hero">
     <div class="big">Let's<br>build.</div>
     <div class="contact">
       <span class="u-label">Contact</span>
