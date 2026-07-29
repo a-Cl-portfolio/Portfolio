@@ -40,6 +40,9 @@ a{color:inherit;text-decoration:none;}
 .tile.sm{grid-column:span 2;aspect-ratio:1/1;}
 .tile.tall{grid-column:span 2;aspect-ratio:2/3;}
 .tile.wide{grid-column:span 6;aspect-ratio:16/6;}
+.gallery--framed{max-width:75%;grid-template-columns:repeat(2,1fr);}
+.tile--img{padding:0;min-height:0;aspect-ratio:auto;overflow:hidden;background:#f4f2ee;}
+.tile--img img{display:block;width:100%;height:auto;}
 /* carousel / slideshow */
 .carousel{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:#0c0c0c;max-width:560px;}
 .carousel__track{display:flex;transition:transform .55s cubic-bezier(.7,0,.2,1);}
@@ -61,6 +64,7 @@ a{color:inherit;text-decoration:none;}
 .imggrid{columns:2;column-gap:clamp(12px,1.5vw,18px);max-width:75%;}
 .imggrid img{width:100%;height:auto;display:block;margin:0 0 clamp(12px,1.5vw,18px);border:1px solid var(--line-strong);background:#f4f2ee;break-inside:avoid;}
 @media(max-width:720px){.imggrid{columns:1;max-width:100%;}}
+@media(max-width:720px){.gallery--framed{max-width:100%;}}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
@@ -130,11 +134,11 @@ a{color:inherit;text-decoration:none;}
     </div>
     <p class="sub__lede">Analysis of a brutalist house — Vittoriano Viganò.</p>
     <p>A group project in which we examined the brutalist house on Lake Garda by Vittoriano Viganò. My group member and I focused on the modular furniture and the use of colour. The different sofas could easily be moved and stacked, creating endless possibilities for different compositions and layouts of the space. The series is called “Cavalletto,” designed in 1956 by Angelo Mangiarotti and Bruno Morassutti.</p>
-    <div class="gallery">
-      <div class="tile med"><span class="n">01</span><span class="t">Casa La Scala</span></div>
-      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
-      <div class="tile big"><span class="n">03</span><span class="t">Cavalletto furniture</span></div>
-      <div class="tile sm"><span class="n">04</span><span class="t">Colour study</span></div>
+    <div class="gallery gallery--framed">
+      <div class="tile tile--img"><img src="images/university/lascala-01.jpg" alt="Casa La Scala — site plan on Lake Garda" loading="lazy"></div>
+      <div class="tile tile--img"><img src="images/university/lascala-02.jpg" alt="Casa La Scala — interior and colour analysis with Cavalletto furniture" loading="lazy"></div>
+      <div class="tile tile--img"><img src="images/university/lascala-03.jpg" alt="Casa La Scala — colour analysis with NCS palette" loading="lazy"></div>
+      <div class="tile tile--img"><img src="images/university/lascala-04.jpg" alt="Casa La Scala — circulation and structural analysis" loading="lazy"></div>
     </div>
     <p class="sub__credit">In collaboration with Heleen Van Acker</p>
   </div><div class="sub">
