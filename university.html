@@ -40,9 +40,12 @@ a{color:inherit;text-decoration:none;}
 .tile.sm{grid-column:span 2;aspect-ratio:1/1;}
 .tile.tall{grid-column:span 2;aspect-ratio:2/3;}
 .tile.wide{grid-column:span 6;aspect-ratio:16/6;}
-.gallery--framed{max-width:75%;grid-template-columns:repeat(2,1fr);}
-.tile--img{padding:0;min-height:0;aspect-ratio:auto;overflow:hidden;background:#f4f2ee;}
-.tile--img img{display:block;width:100%;height:auto;}
+.collage{position:relative;margin:clamp(4px,1vw,12px) 0;}
+.collage img{display:block;height:auto;border:1px solid var(--line-strong);background:#f4f2ee;box-shadow:0 12px 38px rgba(17,17,16,.13);}
+.collage .c1{width:60%;margin:0;transform:rotate(-1.4deg);}
+.collage .c2{width:46%;margin:-9% 0 0 auto;transform:rotate(1.8deg);position:relative;z-index:2;}
+.collage .c3{width:70%;margin:-7% auto 0 4%;transform:rotate(-.8deg);position:relative;z-index:1;}
+.collage .c4{width:45%;margin:-11% 3% 0 auto;transform:rotate(2.2deg);position:relative;z-index:3;}
 /* carousel / slideshow */
 .carousel{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:#0c0c0c;max-width:560px;}
 .carousel__track{display:flex;transition:transform .55s cubic-bezier(.7,0,.2,1);}
@@ -64,7 +67,7 @@ a{color:inherit;text-decoration:none;}
 .imggrid{columns:2;column-gap:clamp(12px,1.5vw,18px);max-width:75%;}
 .imggrid img{width:100%;height:auto;display:block;margin:0 0 clamp(12px,1.5vw,18px);border:1px solid var(--line-strong);background:#f4f2ee;break-inside:avoid;}
 @media(max-width:720px){.imggrid{columns:1;max-width:100%;}}
-@media(max-width:720px){.gallery--framed{max-width:100%;}}
+@media(max-width:720px){.collage .c1,.collage .c2,.collage .c3,.collage .c4{width:88%;margin:0 auto clamp(14px,4vw,22px);transform:none;}}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
@@ -134,11 +137,11 @@ a{color:inherit;text-decoration:none;}
     </div>
     <p class="sub__lede">Analysis of a brutalist house — Vittoriano Viganò.</p>
     <p>A group project in which we examined the brutalist house on Lake Garda by Vittoriano Viganò. My group member and I focused on the modular furniture and the use of colour. The different sofas could easily be moved and stacked, creating endless possibilities for different compositions and layouts of the space. The series is called “Cavalletto,” designed in 1956 by Angelo Mangiarotti and Bruno Morassutti.</p>
-    <div class="gallery gallery--framed">
-      <div class="tile tile--img"><img src="images/university/lascala-01.jpg" alt="Casa La Scala — site plan on Lake Garda" loading="lazy"></div>
-      <div class="tile tile--img"><img src="images/university/lascala-02.jpg" alt="Casa La Scala — interior and colour analysis with Cavalletto furniture" loading="lazy"></div>
-      <div class="tile tile--img"><img src="images/university/lascala-03.jpg" alt="Casa La Scala — colour analysis with NCS palette" loading="lazy"></div>
-      <div class="tile tile--img"><img src="images/university/lascala-04.jpg" alt="Casa La Scala — circulation and structural analysis" loading="lazy"></div>
+    <div class="collage">
+      <img class="c1" src="images/university/lascala-01.jpg" alt="Casa La Scala — site plan on Lake Garda" loading="lazy">
+      <img class="c2" src="images/university/lascala-02.jpg" alt="Casa La Scala — interior and colour analysis with Cavalletto furniture" loading="lazy">
+      <img class="c3" src="images/university/lascala-03.jpg" alt="Casa La Scala — colour analysis with NCS palette" loading="lazy">
+      <img class="c4" src="images/university/lascala-04.jpg" alt="Casa La Scala — circulation and structural analysis" loading="lazy">
     </div>
     <p class="sub__credit">In collaboration with Heleen Van Acker</p>
   </div><div class="sub">
