@@ -54,6 +54,10 @@ a{color:inherit;text-decoration:none;}
 .carousel__dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(237,235,230,.5);cursor:pointer;padding:0;transition:width .25s,background .25s;}
 .carousel__dots button.active{background:var(--paper);width:22px;border-radius:5px;}
 .carousel__count{position:absolute;top:14px;right:16px;z-index:3;color:var(--paper);font-size:11px;letter-spacing:.14em;font-variant-numeric:tabular-nums;background:rgba(17,17,16,.42);padding:5px 11px;}
+.sub__full{width:100vw;margin-left:calc(50% - 50vw);}
+.sub__full img{display:block;width:100%;height:auto;}
+.sub__center{width:100vw;margin-left:calc(50% - 50vw);display:flex;justify-content:center;}
+.sub__center img{display:block;width:80vw;max-width:80vw;height:auto;}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
@@ -133,12 +137,12 @@ a{color:inherit;text-decoration:none;}
     </div>
     <p class="sub__lede">Only a sailor's knot as a connection to society — architect of your own life.</p>
     <p>The cargo ship is a continuously changing object and, in itself, essentially a permanent worksite. Steel plates are welded on where necessary to ensure its quality. It can be compared to a human being — something that is never complete and always leaves room for improvement; something that allows bad traits to be hidden behind a new, good one. I believe that we, as humans, are constantly evolving: every new encounter, experience, job and emotion contributes to who we are. As long as we live, we experience and continue to take shape each day. The human as a worksite, the worksite as a cargo ship, the cargo ship as a human. Because I have learned so much from visiting boats, I decided to showcase living on a boat. Just like Luc Deleu with his floating U.I.A., I introduce an educational aspect to my design: visitors can temporarily stay on the boat or take part in ongoing activities. By incorporating public restrooms and installations, I want to welcome people aboard. The boat has a kitchen, two restrooms, a bathroom, a bedroom and an outdoor space, just like a traditional home.</p>
-    <div class="gallery">
-      <div class="tile big"><span class="n">01</span><span class="t">Cargo ship</span></div>
-      <div class="tile sm"><span class="n">02</span><span class="t">Plan</span></div>
-      <div class="tile med"><span class="n">03</span><span class="t">Living aboard</span></div>
-      <div class="tile sm"><span class="n">04</span><span class="t">Detail</span></div>
-      <div class="tile tall"><span class="n">05</span><span class="t">Section</span></div>
+    <div class="carousel" data-carousel>
+      <div class="carousel__count"><b>1</b> / 5</div>
+      <div class="carousel__track"><div class="carousel__slide" style="background-image:url('images/university/edge-01.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-02.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-03.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-04.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-05.jpg')"></div></div>
+      <button class="carousel__btn prev" aria-label="Previous">&larr;</button>
+      <button class="carousel__btn next" aria-label="Next">&rarr;</button>
+      <div class="carousel__dots"><button aria-label="Show image 1"></button><button aria-label="Show image 2"></button><button aria-label="Show image 3"></button><button aria-label="Show image 4"></button><button aria-label="Show image 5"></button></div>
     </div>
   </div><div class="sub">
     <div class="sub__top">
