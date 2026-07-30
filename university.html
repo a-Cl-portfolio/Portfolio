@@ -58,6 +58,11 @@ a{color:inherit;text-decoration:none;}
 .carousel__slide{flex:0 0 100%;aspect-ratio:3/2;background-size:cover;background-position:50% 42%;}
 .carousel--doc{background:#f4f2ee;}
 .carousel--doc .carousel__slide{background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:4/3;}
+.carousel--plain{background:transparent;border:0;}
+.carousel--plain .carousel__slide{background-size:contain;background-repeat:no-repeat;background-position:center;}
+.carousel--plain .carousel__dots button{background:rgba(17,17,16,.22);}
+.carousel--plain .carousel__dots button.active{background:var(--ink);}
+.carousel--plain .carousel__count{color:var(--ink);background:rgba(17,17,16,.09);}
 .carousel__btn{box-shadow:0 0 0 1px rgba(17,17,16,.10);}
 .carousel__btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border:0;border-radius:50%;background:rgba(237,235,230,.88);color:var(--ink);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;}
 .carousel__btn:hover{background:var(--paper);transform:translateY(-50%) scale(1.06);}
@@ -170,7 +175,7 @@ a{color:inherit;text-decoration:none;}
     <p class="sub__lede">Only a sailor's knot as a connection to society — architect of your own life.</p>
     <p>The cargo ship is a continuously changing object and, in itself, essentially a permanent worksite. Steel plates are welded on where necessary to ensure its quality. It can be compared to a human being — something that is never complete and always leaves room for improvement; something that allows bad traits to be hidden behind a new, good one. I believe that we, as humans, are constantly evolving: every new encounter, experience, job and emotion contributes to who we are. As long as we live, we experience and continue to take shape each day. The human as a worksite, the worksite as a cargo ship, the cargo ship as a human. Because I have learned so much from visiting boats, I decided to showcase living on a boat. Just like Luc Deleu with his floating U.I.A., I introduce an educational aspect to my design: visitors can temporarily stay on the boat or take part in ongoing activities. By incorporating public restrooms and installations, I want to welcome people aboard. The boat has a kitchen, two restrooms, a bathroom, a bedroom and an outdoor space, just like a traditional home.</p>
     </div>
-    <div class="carousel" data-carousel>
+    <div class="carousel carousel--plain" data-carousel>
       <div class="carousel__count"><b>1</b> / 13</div>
       <div class="carousel__track"><div class="carousel__slide" style="background-image:url('images/university/edge-01.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-02.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-03.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-04.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-05.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-06.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-07.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-08.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-09.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-10.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-11.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-12.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-13.jpg')"></div></div>
       <button class="carousel__btn prev" aria-label="Previous">&larr;</button>
