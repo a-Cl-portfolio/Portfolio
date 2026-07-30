@@ -55,6 +55,9 @@ a{color:inherit;text-decoration:none;}
 .carousel__dots button.active{background:var(--paper);width:22px;border-radius:5px;}
 .carousel__count{position:absolute;top:14px;right:16px;z-index:3;color:var(--paper);font-size:11px;letter-spacing:.14em;font-variant-numeric:tabular-nums;background:rgba(17,17,16,.42);padding:5px 11px;}
 @media(max-width:720px){.carousel__slide{aspect-ratio:4/3;} .carousel__btn{width:38px;height:38px;font-size:16px;}}
+.sub__single{margin-top:clamp(6px,1vw,14px);}
+.sub__single img{display:block;width:100%;max-width:680px;height:auto;}
+.sub__single--full img{max-width:100%;}
 /* sub-projects */
 .subhead{display:flex;justify-content:space-between;align-items:baseline;margin:clamp(10px,2vw,20px) 0 clamp(20px,2.5vw,30px);padding-top:clamp(18px,2.5vw,30px);border-top:1px solid var(--line);}
 .sub{padding:clamp(30px,4vw,56px) 0;border-top:1px solid var(--ink);}
@@ -118,12 +121,7 @@ a{color:inherit;text-decoration:none;}
     </div>
     <p class="sub__lede">Showroom design for Sedus Stoll bvba.</p>
     <p>Design and staging of the Sedus showroom — arranging the collection into furnished, functional settings that let visitors experience each piece in context.</p>
-    <div class="gallery">
-      <div class="tile big"><span class="n">01</span><span class="t">Showroom</span></div>
-      <div class="tile sm"><span class="n">02</span><span class="t">Detail</span></div>
-      <div class="tile med"><span class="n">03</span><span class="t">Vignette</span></div>
-      <div class="tile sm"><span class="n">04</span><span class="t">Furniture</span></div>
-    </div>
+    <div class="sub__single sub__single--full"><img src="images/sedus/showroom-01.webp" alt="Sedus showroom — staged settings of the collection: lounge, workspaces, meeting and lockers" loading="lazy"></div>
     <p class="sub__credit">Design © Anaëlle Clef · For Sedus Stoll bvba · Photography © Pilar Shoots</p>
   </div><div class="sub">
     <div class="sub__top">
