@@ -90,6 +90,10 @@ a{color:inherit;text-decoration:none;}
 .epi-row__img img{display:block;width:auto;height:auto;max-height:340px;border:1px solid var(--line-strong);}
 .epi-row .sub__epi{margin:0;flex:1;min-width:min(100%,300px);}
 @media(max-width:720px){.epi-row__img{width:100%;}.epi-row__img img{max-height:none;width:100%;}}
+.sub__split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);align-items:center;}
+.sub__split .carousel{max-width:none;}
+.sub__split p{max-width:52ch;}
+@media(max-width:860px){.sub__split{grid-template-columns:1fr;gap:clamp(20px,5vw,30px);}}
 .sub p{margin:0 0 clamp(22px,2.5vw,32px);max-width:66ch;font-size:15.5px;line-height:1.6;color:var(--body);}
 .sub__credit{margin:clamp(16px,2vw,24px) 0 0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);}
 @media(max-width:720px){.sub__top{grid-template-columns:34px 1fr;}.sub__top .cat{display:none;}}
@@ -161,14 +165,18 @@ a{color:inherit;text-decoration:none;}
       <h2>The Edge of Living</h2>
       <span class="cat">Studio Project</span>
     </div>
+    <div class="sub__split">
+    <div>
     <p class="sub__lede">Only a sailor's knot as a connection to society — architect of your own life.</p>
     <p>The cargo ship is a continuously changing object and, in itself, essentially a permanent worksite. Steel plates are welded on where necessary to ensure its quality. It can be compared to a human being — something that is never complete and always leaves room for improvement; something that allows bad traits to be hidden behind a new, good one. I believe that we, as humans, are constantly evolving: every new encounter, experience, job and emotion contributes to who we are. As long as we live, we experience and continue to take shape each day. The human as a worksite, the worksite as a cargo ship, the cargo ship as a human. Because I have learned so much from visiting boats, I decided to showcase living on a boat. Just like Luc Deleu with his floating U.I.A., I introduce an educational aspect to my design: visitors can temporarily stay on the boat or take part in ongoing activities. By incorporating public restrooms and installations, I want to welcome people aboard. The boat has a kitchen, two restrooms, a bathroom, a bedroom and an outdoor space, just like a traditional home.</p>
+    </div>
     <div class="carousel" data-carousel>
       <div class="carousel__count"><b>1</b> / 13</div>
       <div class="carousel__track"><div class="carousel__slide" style="background-image:url('images/university/edge-01.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-02.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-03.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-04.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-05.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-06.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-07.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-08.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-09.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-10.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-11.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-12.jpg')"></div><div class="carousel__slide" style="background-image:url('images/university/edge-13.jpg')"></div></div>
       <button class="carousel__btn prev" aria-label="Previous">&larr;</button>
       <button class="carousel__btn next" aria-label="Next">&rarr;</button>
       <div class="carousel__dots"><button aria-label="Show image 1"></button><button aria-label="Show image 2"></button><button aria-label="Show image 3"></button><button aria-label="Show image 4"></button><button aria-label="Show image 5"></button><button aria-label="Show image 6"></button><button aria-label="Show image 7"></button><button aria-label="Show image 8"></button><button aria-label="Show image 9"></button><button aria-label="Show image 10"></button><button aria-label="Show image 11"></button><button aria-label="Show image 12"></button><button aria-label="Show image 13"></button></div>
+    </div>
     </div>
   </div><div class="sub">
     <div class="sub__top">
